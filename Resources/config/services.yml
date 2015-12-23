@@ -1,0 +1,10 @@
+services:
+    lag.repository.repository_pool:
+        class: LAG\DoctrineRepositoryBundle\Repository\RepositoryPool
+
+    lag.repository.metadata_event_subscriber:
+        class: LAG\DoctrineRepositoryBundle\Event\Subscriber\MetadataEventSubscriber
+        tags:
+            - {name: doctrine.event_subscriber}
+        calls:
+            - [setRepositoryPool, [@lag.repository.repository_pool]]
