@@ -1,0 +1,43 @@
+{
+  "name": "lag/doctrine-repository",
+  "type": "symfony-bundle",
+  "description": "Generic admin bundle for Symfony2 from L'Arrière Guichet",
+  "keywords": [
+    "Admin",
+    "Backoffice",
+    "Symfony2",
+    "Generic"
+  ],
+  "homepage": "https://github.com/larriereguichet/AdminBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "JohnKrovitch",
+      "email": "arnaudfrezet@gmail.com"
+    },
+    {
+      "name": "JohanDufour",
+      "email": "johan.dufour@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "symfony/dependency-injection": "~2.6",
+    "doctrine/orm": "~2.5",
+    "doctrine/doctrine-bundle": "~1.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.7.*",
+    "fabpot/php-cs-fixer": "^1.10"
+  },
+  "autoload": {
+    "psr-0": {
+      "LAG\\DoctrineRepositoryBundle": ""
+    }
+  },
+  "config": {
+    "bin-dir": "bin",
+    "component-dir": "web/assets"
+  },
+  "target-dir": "LAG/DoctrineRepositoryBundle"
+}
