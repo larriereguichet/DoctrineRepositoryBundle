@@ -3,12 +3,11 @@
   "type": "symfony-bundle",
   "description": "Generic admin bundle for Symfony2 from L'Arrière Guichet",
   "keywords": [
-    "Admin",
-    "Backoffice",
     "Symfony2",
-    "Generic"
+    "Doctrine",
+    "Repository"
   ],
-  "homepage": "https://github.com/larriereguichet/AdminBundle",
+  "homepage": "https://github.com/larriereguichet/DoctrineRepositoryBundle",
   "license": "MIT",
   "authors": [
     {
