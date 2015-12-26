@@ -4,12 +4,13 @@ namespace LAG\DoctrineRepositoryBundle\Repository;
 
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\Persistence\ObjectRepository;
 use Doctrine\ORM\EntityRepository;
 
 /**
  * Abstract doctrine repository
  */
-abstract class DoctrineRepository implements RepositoryInterface
+abstract class DoctrineRepository implements RepositoryInterface, ObjectRepository
 {
     /**
      * @var ObjectManager
