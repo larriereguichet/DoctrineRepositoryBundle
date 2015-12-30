@@ -5,6 +5,7 @@ namespace LAG\DoctrineRepositoryBundle\Repository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\QueryBuilder;
 
 /**
  * Abstract doctrine repository
@@ -100,6 +101,20 @@ abstract class DoctrineRepository implements RepositoryInterface
     {
         $this->objectManager->remove($entity);
         $this->objectManager->flush();
+    }
+
+    /**
+     * Create a doctrine QueryBuilder
+     *
+     * @param $alias
+     * @param null $indexBy
+     * @return QueryBuilder
+     */
+    public function createQueryBuilder($alias, $indexBy = null)
+    {
+        return $this
+            ->repository
+            ->createQueryBuilder($alias, $indexBy);
     }
 
     /**

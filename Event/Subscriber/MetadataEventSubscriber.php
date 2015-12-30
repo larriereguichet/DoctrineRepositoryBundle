@@ -20,7 +20,7 @@ class MetadataEventSubscriber implements EventSubscriber
     /**
      * @var array
      */
-    protected $classeLoaded = [];
+    protected $classesLoaded = [];
 
     /**
      * Returns an array of events this subscriber wants to listen to.
@@ -48,10 +48,10 @@ class MetadataEventSubscriber implements EventSubscriber
         $className = $metadata->getName();
 
         // we load repository once per class
-        if (in_array($className, $this->classeLoaded)) {
+        if (in_array($className, $this->classesLoaded)) {
             return;
         }
-        $this->classeLoaded[] = $className;
+        $this->classesLoaded[] = $className;
 
         // a custom repository class must be set and it must be in the repository pool
         if ($metadata->customRepositoryClassName and $this
