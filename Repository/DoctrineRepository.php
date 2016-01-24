@@ -59,7 +59,7 @@ abstract class DoctrineRepository implements RepositoryInterface
      * @param array|null $orderBy
      * @param null $limit
      * @param null $offset
-     * @return Collection
+     * @return array
      */
     public function findBy(array $criteria, array $orderBy = [], $limit = null, $offset = null)
     {
