@@ -61,7 +61,7 @@ abstract class DoctrineRepository implements RepositoryInterface
      * @param null $offset
      * @return Collection
      */
-    public function findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+    public function findBy(array $criteria, array $orderBy = [], $limit = null, $offset = null)
     {
         return $this
             ->repository
