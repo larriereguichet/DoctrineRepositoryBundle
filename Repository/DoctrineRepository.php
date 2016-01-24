@@ -65,7 +65,7 @@ abstract class DoctrineRepository implements RepositoryInterface
     {
         return $this
             ->repository
-            ->findBy($criteria, $offset, $limit, $offset);
+            ->findBy($criteria, $orderBy, $limit, $offset);
     }
 
     /**
