@@ -7,4 +7,4 @@ services:
         tags:
             - {name: doctrine.event_subscriber}
         calls:
-            - [setRepositoryPool, [@lag.repository.repository_pool]]
+            - [setRepositoryPool, ['@lag.repository.repository_pool']]
