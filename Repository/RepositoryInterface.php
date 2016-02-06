@@ -18,7 +18,7 @@ interface RepositoryInterface extends ObjectRepository
     /**
      * Find all entities in the repository
      *
-     * @return Collection
+     * @return array|Collection
      */
     public function findAll();
 
@@ -27,9 +27,9 @@ interface RepositoryInterface extends ObjectRepository
      *
      * @param array $criteria
      * @param array|null $orderBy
-     * @param null $limit
-     * @param null $offset
-     * @return Collection
+     * @param int|null $limit
+     * @param int|null $offset
+     * @return array|Collection
      */
     public function findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null);
 

@@ -43,7 +43,7 @@ abstract class DoctrineRepository implements RepositoryInterface
     /**
      * Find all entities in the repository.
      *
-     * @return Collection
+     * @return array|Collection
      */
     public function findAll()
     {
@@ -57,9 +57,9 @@ abstract class DoctrineRepository implements RepositoryInterface
      *
      * @param array $criteria
      * @param array|null $orderBy
-     * @param null $limit
-     * @param null $offset
-     * @return array
+     * @param int|null $limit
+     * @param int|null $offset
+     * @return array|Collection
      */
     public function findBy(array $criteria, array $orderBy = [], $limit = null, $offset = null)
     {
